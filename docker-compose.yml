@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  registeration-component:
+    build: ./Students_Registeration
+    volumes:
+      - ./batch/:/app/data/batch/
+      - ./database/:/app/data/database/
+    stdin_open: true
+    tty: true
+  statistics_component:
+    build: ./Students_Statistics
+    volumes:
+      - ./batch/:/app/data/batch/
+      - ./database/:/app/data/database/
+    stdin_open: true
+    tty: true
